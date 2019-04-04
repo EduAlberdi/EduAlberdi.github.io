@@ -1,2 +1,2 @@
-# EduAlberdi.github.io
+# Eduard Alberdi Portfolio
 Personal Web Portfolio
