@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Portfolio - Eduard Alberdi</title>
+
+    <meta name="description" content="Personal web portfolio for Eduard Alberdi. Developer, geek and web enthusiast">
+	<meta name="author" content="Eduard Alberdi Marín">
+	
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link href="./css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="home" class="container-fluid height-fix">
+		<!-- Navigation -->
+		<div class="row">
+			<div class="view">
+				<video class="video-intro" autoplay loop muted>
+						<source src="./documents/video-background-coding.mp4" type="video/mp4" />
+				</video>
+				<div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+					<div class="text-center white-text mx-5">
+						<h1>Hi, I'm <strong class="highlight">Eduard Alberdi</strong>,</h1>
+						<h3>Full stack web developer, geek and computer enthusiast</h3>
+						<a href="#about_me" ><div id="know-more" class="pure-material-button-outlined">Know more about me</div></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="navbar-toggler-icon"></span>
+					</button><a class="navbar-brand" href="#">| EA |</a>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="navbar-nav ml-md-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#home">HOME <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#about">ABOUT ME</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#work">MY WORK</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!-- /Navigation -->
+		<div id="about" class="row main-content">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				
+				<div id="about_me" class="row">
+					<div class="col-md-6 text summary animated slide-in-left" data-animation="slide-in-left">
+						<h2 class="text-center section-title">WHO AM I?</h2>
+						<img src="./imgs/eduard-alberdi.jpg" alt="eduard-image" class="personal-img rounded-circle mx-auto d-block">
+						<p>I'm the Full Stack Developer based in Barcelona, Spain.<br />I have serious passion for front-end (web components), devops and security.<br /><span class="highlight">Currently in active job search.</span></p>
+					</div>
+					<div class="col-md-6 animated slide-in-right" data-animation="slide-in-right">
+						<h2 class="text-center section-title">WHAT SKILLS DO I HAVE?</h2>
+						<div class="bar flex">
+							<div class="bar fill" style="width:80%">
+								<div class="tag bold flex">CSS</div>
+							</div>
+							<span>80%</span>
+						</div>
+						<div class="bar flex">
+							<div class="bar fill" style="width:85%">
+								<div class="tag bold flex">HTML</div>
+							</div>
+							<span>85%</span>
+						</div>
+						<div class="bar flex">
+							<div class="bar fill" style="width:90%">
+								<div class="tag bold flex">JavaScript</div>
+							</div>
+							<span>90%</span>
+						</div>
+						<div class="bar flex">
+							<div class="bar fill" style="width:75%">
+								<div class="tag bold flex">LitElement</div>
+							</div>
+							<span>75%</span>
+						</div>
+						<div class="bar flex">
+							<div class="bar fill" style="width:60%">
+								<div class="tag bold flex">Redux</div>
+							</div>
+							<span>60%</span>
+						</div>
+						<div class="bar flex">
+							<div class="bar fill" style="width:65%">
+								<div class="tag bold flex">NPM</div>
+							</div>
+							<span>65%</span>
+						</div>
+						<div class="bar flex">
+							<div class="bar fill" style="width:70%">
+								<div class="tag bold flex">PHP</div>
+							</div>
+							<span>70%</span>
+						</div>
+						<div class="bar flex">
+							<div class="bar fill" style="width:50%">
+								<div class="tag bold flex">Node.js</div>
+							</div>
+							<span>50%</span>
+						</div>
+						<div class="bar flex">
+							<div class="bar fill" style="width:65%">
+								<div class="tag bold flex">NPM</div>
+							</div>
+							<span>65%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div id="work" class="row main-content">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<h2 class="text-center section-title">WHAT HAVE I DONE?</h2>
+				<div class="work-cards">
+					<div class="card animated slide-in-left" data-animation="slide-in-left">
+						<div class="card-image">
+							<img class="img-responsive" src="./imgs/my-work-uxland.jpg">
+							<span class="card-title">UXLAND</span>
+						</div>
+						<div class="card-content">
+							<p>I developed few web components and PWA's for companies like ICS (Institut Català de la Salud), EUGIN and some more companies.</p><br />
+							<p>Technologies used in this project: </p>
+							<ul>
+								<li>LitElement</li>
+								<li>Redux</li>
+								<li>TypeScript</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card animated slide-in-right" data-animation="slide-in-left">
+						<div class="card-image">
+							<img class="img-responsive" src="./imgs/my-work-life-informatica.jpg">
+							<span class="card-title">LIFE Informàtica</span>
+						</div>
+						<div class="card-content">
+							<p>I developed a WooCommerce ecommerce shop, with custom plugins and custom features</p><br />
+							<p>Technologies used in this project: </p>
+							<ul>
+								<li>PHP (Native)</li>
+								<li>JavaScript & JQuery</li>
+								<li>HTML</li>
+							</ul>
+						</div>
+						<div class="card-action">
+							<a href="https://lifeinformatica.com" target="_blank" class="highlight">SEE MORE</a>
+						</div>
+					</div>
+					<div class="card animated slide-in-left" data-animation="slide-in-right">
+						<div class="card-image">
+							<img class="img-responsive" src="./imgs/my-work-area-solucions.jpg">
+							<span class="card-title">AREA Solucions</span>
+						</div>
+						<div class="card-content">
+							<p>I have developed a question application to know what documents have to be submitted to Town Hall of Sant Feliu de Llobregat when public activities are programmed</p><br />
+							<p>Technologies used in this project: </p>
+							<ul>
+								<li>JS & JQuery</li>
+								<li>HTML</li>
+								<li>CSS</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card animated slide-in-right" data-animation="slide-in-right">
+						<div class="card-image">
+							<img class="img-responsive" src="./imgs/my-work-la-pelu-del-jose.jpg">
+							<span class="card-title">La Pelu Del Jose</span>
+						</div>
+						<div class="card-content">
+							<p>I have developed a corporate website for a classic Barbershop based in Barcelona, which has led them to increase productivity by 47%</p><br />
+							<p>Technologies used in this project: </p>
+							<ul>
+								<li>JS & JQuery (+API for Instagram posts)</li>
+								<li>HTML</li>
+								<li>CSS</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+    <script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script src="./js/scripts.js"></script>
+	
+  </body>
+</html>
