@@ -333,7 +333,7 @@ h1 > strong.highlight {
         border-radius: 8px;
         background-clip: padding-box;
         max-width: 430px;
-        flex: 1 50% 100%;
+        flex: 1 100%;
         display: flex;
     }
 }
