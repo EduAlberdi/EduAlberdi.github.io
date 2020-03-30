@@ -1,16 +1,15 @@
+* {
+    font-family: 'Roboto' !important;
+}
 html {
     height: 100%;
     width: 100%;
-    font-family: 'Quicksand', 'Roboto';
     scroll-behavior: smooth;
 }
 .highlight,
 .navbar-dark .navbar-nav .nav-link.active {
     color: #E31B6D;
     font-weight: 900;
-}
-h1 > strong.highlight {
-    font-family: 'Quicksand';
 }
 .navbar {
     background-color: rgba(52,58,64,.5);
