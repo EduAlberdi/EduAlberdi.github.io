@@ -1,0 +1,97 @@
+---
+import Section from "@/components/Section.astro"
+import HTML from "@/icons/html.astro"
+import CSS from "@/icons/css.astro"
+import JavaScript from "@/icons/javascript.astro"
+import TypeScript from "@/icons/type.astro"
+import Node from "@/icons/node.astro"
+import MySQL from "@/icons/sql.astro"
+import Git from "@/icons/git.astro"
+import GitHub from "@/icons/github.astro"
+import NestJs from "@/icons/nest.astro"
+import Java from "@/icons/java.astro"
+import { skills } from "@cv"
+import Angular from "@/icons/angular.astro"
+import Kotlin from "@/icons/kotlin.astro"
+import AstroIcn from "@/icons/astro.astro"
+import Bun from "@/icons/bun.astro"
+import SQL_Server from "@/icons/sql-server.astro"
+import Python from "@/icons/python.astro"
+import Docker from "@/icons/docker.astro"
+import Travis from "@/icons/travis-ci.astro"
+
+const SKILLS_ICONS: Record<string, any> = {
+  HTML,
+  CSS,
+  JavaScript,
+  TypeScript,
+  Node,
+  MySQL,
+  Java,
+  NestJs,
+  Git,
+  GitHub,
+  Kotlin,
+  AstroIcn,
+  Angular,
+  Bun,
+  SQL_Server,
+  Python,
+  Docker,
+  Travis
+}
+---
+
+<Section title="Skills">
+  <ul>
+    {
+      skills.map(({ name }) => {
+        let iconName: string;
+        switch (name){
+          case "Astro":
+            iconName = "AstroIcn"
+            break;
+          case "SQL Server":
+            iconName =  "SQL_Server"
+            break;
+          case "Travis CI":
+            iconName =  "Travis"
+            break;
+          default:
+            iconName = name
+            break;
+        }
+        const Icon = SKILLS_ICONS[iconName]
+
+        return (
+          <li>
+            {Icon && <Icon />} <span>{name}</span>
+          </li>
+        )
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    align-items: center;
+    background: #eee;
+    border-radius: 6px;
+    color: black;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
+  }
+  svg {
+    height: 16px;
+  }
+</style>

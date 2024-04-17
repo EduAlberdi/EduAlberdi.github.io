@@ -1,0 +1,147 @@
+---
+import Section from "@/components/Section.astro"
+
+import { work } from "@cv"
+
+const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+---
+
+<Section title="Experience">
+  <ul>
+    {
+
+
+      work.map(
+        ({ name, startDate, endDate, position, summary }) => {
+          const startYear = new Date(startDate)
+          const endYear = endDate != null ? new Date(endDate) : null;
+
+          return (
+            <li>
+              <article>
+                <header>
+                  <div>
+                    <h3>{name}</h3>
+                    <h4>{position}</h4>
+                  </div>
+                  <div>
+                    <time 
+                      datetime={startDate}
+                      data-title={startDate}>
+                      { months[startYear.getMonth()]+' '+startYear.getFullYear() }
+                    </time>
+                    {" - "}
+                    <time 
+                      datetime={endDate}
+                      data-title={endDate}>
+                      {(endYear !== null) ? months[startYear.getMonth()]+' '+endYear.getFullYear() : 'Actual'}
+                    </time>
+                  </div>
+                </header>
+                <section>
+                  <p>{summary}</p>
+                </section>
+              </article>
+            </li>
+          )
+        }
+      )
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  article h3 {
+    font-weight: 500;
+    color: #111;
+    margin-bottom: .3rem;
+  }
+
+  article a {
+    color: #111;
+  }
+
+  article a:hover {
+    text-decoration: underline;
+  }
+
+  article h4 {
+    color: #222;
+    font-weight: 400;
+    margin-bottom: .3rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: #555;
+    font-size: 0.85rem;
+    min-width: 102px;
+    cursor: default;
+  }
+
+  footer {
+    padding: 1rem 2rem 0 2rem;
+    ul {
+      gap: 1rem;
+      font-size: .9rem;
+      display: grid;
+      text-align: center;
+      grid-template-columns: repeat(4, max-content);
+      grid-template-rows: min-content 1fr min-content;
+      justify-content: center;
+      li {
+        border: 1px solid gray;
+        border-radius: 1rem;
+        padding: .2rem .75rem;
+        background-color: #f3f3f3;
+      }
+    }
+  }
+
+  [data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease-in-out 0.5s;
+    visibility: visible;
+  }
+
+  [data-title]:after {
+    content: attr(data-title);
+    background-color: #333;
+    color: #fff;
+    font-size: .75rem;
+    font-family: Menlo, Monaco, Lucida Console, "Courier New", monospace;;
+    position: absolute;
+    padding: .2rem .5rem;
+    bottom: -1.4rem;
+    left: 50%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 1px #222222;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 6px;
+  }
+
+  [data-title] {
+    position: relative;
+  }
+
+  @media (width <= 700px) {
+    time {
+      text-align: right;
+    }
+  }
+</style>
