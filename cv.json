@@ -1,0 +1,380 @@
+{
+  "basics": {
+    "name": "Eduard Alberdi Marín",
+    "label": "Full-Stack Developer",
+    "image": "/me.webp",
+    "email": "edu.alberdi@gmail.com",
+    "phone": "",
+    "url": "https://edualberdi.github.io/",
+    "summary": "With over a decade of expertise as a full-stack developer, I specialize in architecting and implementing robust digital solutions that seamlessly integrate front-end and back-end functionalities. My extensive experience enables me to tackle complex challenges with creativity and efficiency, delivering cutting-edge solutions that exceed expectations.",
+    "location": {
+      "address": "",
+      "postalCode": "08030",
+      "city": "Barcelona",
+      "countryCode": "ES",
+      "region": "España"
+    },
+    "calendly": {
+      "network": "Calendly",
+      "username": "Eduard Alberdi Marín",
+      "url": "https://calendly.com/edu-alberdi"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Eduard Alberdi",
+        "url": "https://linkedin.com/in/eduard-alberdi"
+      },
+      {
+        "network": "GitHub",
+        "username": "EduAlberdi",
+        "url": "https://github.com/EduAlberdi"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Novatec Software Gmbh",
+      "position": "Full Stack Developer",
+      "url": "https://www.novatec-gmbh.de/es/",
+      "startDate": "2023-05-01",
+      "endDate": null,
+      "summary": "As a Full Stack Developer, I developed and maintained over 10 applications, encompassing both backend-only and full-stack projects. Leveraging Java and Kotlin for backend development and Angular for frontend interfaces, I ensured seamless integration and optimal performance. My contributions resulted in high-quality, user-centric applications that met client expectations. Also contributed to some internal charity projects and hackathons."
+    },
+    {
+      "name": "Werfen",
+      "position": "Full Stack Developer",
+      "url": "https://www.werfen.com/es/esv",
+      "startDate": "2021-11-01",
+      "endDate": "2023-05-01",
+      "summary": "As a Developer at a this leading health tech company, I contributed to a vital application's development, utilizing Java for backend and Angular for frontend. With stringent FDA regulations in mind, ensuring high-quality code was paramount. My efforts ensured compliance while exceeding industry standards and client expectations."
+    },
+    {
+      "name": "ByInfinitumServices",
+      "position": "Full Stack Developer",
+      "url": null,
+      "startDate": "2020-10-01",
+      "endDate": "2021-11-01",
+      "summary": "As the lead developer, I guided a team of five in developing a burocacy application. Built with Angular for the frontend and .NET Core for the backend, our focus was set on high-quality coding since we had to pass several Spanish Goverment's law. Additionally, leveraging Python for web scraping bolstered our data acquisition capabilities. Our collaborative efforts led to a project that met regulatory standards and surpassed industry expectations."
+    },
+    {
+      "name": "LIFE Informatica",
+      "position": "Full Stack Developer",
+      "url": null,
+      "startDate": "2019-06-01",
+      "endDate": "2020-10-01",
+      "summary": "As the team leader in this retailer, I guided a team of two crafting our company's web presence and online store. Employing WooCommerce and WordPress, we implemented bespoke plugins to enrich functionality. Furthermore, I spearheaded the conceptualization, design, and execution of email marketing initiatives. Our combined efforts yielded a dynamic website, seamless e-commerce platform, and impactful marketing campaigns, fueling business expansion and customer interaction."
+    },
+    {
+      "name": "UXLAND BCN",
+      "position": "Frontend Developer",
+      "url": null,
+      "startDate": "2018-09-01",
+      "endDate": "2019-04-01",
+      "summary": "Working for ICS (Catalan Health Institute) as main client, I specialized in designing and developing web components using modern technologies such as Polymer 3, LitElement/LitHTML, and Redux. My responsibilities included crafting intuitive user interfaces and ensuring seamless integration of these components into our healthcare systems. Additionally, I led the integration and development of our DevOps system using Travis-CI, streamlining our development processes and enhancing overall project efficiency."
+    },
+    {
+      "name": "LIFE Informatica",
+      "position": "Full Stack Developer",
+      "url": null,
+      "startDate": "2014-10-01",
+      "endDate": "2018-08-01",
+      "summary": "As a Frontend Developer, I played a pivotal role in designing and developing our company's website and e-commerce platform using WooCommerce and WordPress. My responsibilities included custom plugin development to enhance functionality and ensure seamless integration. Additionally, I actively managed our online community, fostering engagement and facilitating interactions to strengthen our brand presence."
+    },
+    {
+      "name": "LIFE Informatica",
+      "position": "Computer Technician",
+      "url": null,
+      "startDate": "2013-10-01",
+      "endDate": "2014-06-01",
+      "summary": "As a Computer Technician, I excelled in repairing and mounting all types of computers, ensuring optimal functionality and performance. Additionally, I specialized in the design and installation of LAN and WiFi networks, implementing robust solutions to meet organizational needs. Moreover, I demonstrated proficiency in Linux and Windows server administration, overseeing system configurations and ensuring smooth operations across diverse environments."
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Centre d'Estudis Politècnics",
+      "url": "https://politecnics.barcelona/es/",
+      "area": "Higher Technical Certificate in Web App Development.",
+      "studyType": "Higher Degree",
+      "startDate": "2013-09-01",
+      "endDate": "2014-01-01",
+      "score": "8.2",
+      "courses": []
+    },
+    {
+      "institution": "Centre d'Estudis Politècnics",
+      "url": "https://politecnics.barcelona/es/",
+      "area": "Higher Technical Certificate in Network Computer Systems Administration.",
+      "studyType": "Higher Degree",
+      "startDate": "2011-07-01",
+      "endDate": "2013-01-01",
+      "score": "6.9",
+      "courses": []
+    },
+    {
+      "institution": "University of Cambridge School",
+      "url": "https://www.cambridgeenglish.org/es/",
+      "area": "First Certificate in English (B2 First)",
+      "studyType": "Degree",
+      "startDate": "2011-08-01",
+      "endDate": "2011-08-01",
+      "score": "5.6",
+      "courses": []
+    },
+    {
+      "institution": "IES Joan Salvat Papasseit",
+      "url": "https://agora.xtec.cat/ies-salvat-barceloneta/",
+      "area": "Technological Baccalaureate",
+      "studyType": "Baccalaureate",
+      "startDate": "2011-08-01",
+      "endDate": "2011-08-01",
+      "score": "5.6",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": [
+        "web development", "frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": [
+        "web development", "frontend", "responsive design"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": [
+        "web development", "frontend", "backend", "responsive design"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Master",
+      "keywords": [
+        "web development", "frontend", "backend", "responsive design", "compile"
+      ]
+    },
+    {
+      "name": "Angular",
+      "level": "Master",
+      "keywords": [
+        "web development", "frontend", "backend", "responsive design", "compile"
+      ]
+    },
+    {
+      "name": "Kotlin",
+      "level": "Advanced",
+      "keywords": [
+        "web development", "backend", "api", "server", "compile"
+      ]
+    },
+    {
+      "name": "Java",
+      "level": "Advanced",
+      "keywords": [
+        "web development", "backend", "api", "server", "compile"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Advanced",
+      "keywords": [
+        "web development", "backend", "javascript", "server", "compile"
+      ]
+    },
+    {
+      "name": "C#",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": ".NET",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "PHP",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+      ]
+    },
+    {
+      "name": "NestJs",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "Docker",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "Travis CI",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "GitHub Actions",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "SQL Server",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "Python",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "Bun",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "Astro",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [
+    {
+      "name": "mars.codes",
+      "isActive": true,
+      "description": "Historia interactiva con retos de programación para viajar a Marte",
+      "highlights": [
+        "Elige tu propia aventura",
+        "En desarrollo"
+      ],
+      "url": "https://mars.codes"
+    },
+    {
+      "name": "AdventJS",
+      "isActive": true,
+      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
+      "highlights": [
+        "+1 millón de visitas",
+        "Multidioma",
+        "JavaScript & TypeScript"
+      ],
+      "url": "https://adventjs.dev"
+    },
+    {
+      "name": "Codember",
+      "isActive": true,
+      "description": "Juego interactivo de programación con retos y secretos",
+      "highlights": [
+        "+2000 usuarios activos",
+        "Retos para cualquier lenguaje"
+      ],
+      "url": "https://codember.dev"
+    },
+    {
+      "name": "codi.link",
+      "isActive": true,
+      "description": "Playground de código HTML, CSS y JavaScript para compartir",
+      "highlights": [
+        "100k visitas al mes",
+        "Desarrollado por la comunidad"
+      ],
+      "url": "https://codi.link",
+      "github": "https://github.com/midudev/codi.link"
+    },
+    {
+      "name": "Pruebas Técnicas",
+      "isActive": true,
+      "description": "Lista de pruebas técnicas de empresas para practicar programación",
+      "highlights": [
+        "100% gratuito",
+        "+500 soluciones de la comunidad"
+      ],
+      "url": "https://pruebastecnicas.com",
+      "github": "https://github.com/midudev/pruebas-tecnicas"
+    },
+    {
+      "name": "miduConf",
+      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
+      "highlights": [
+        "+15k tickets repartidos",
+        "+50k espectadores en directo"
+      ],
+      "url": "https://miduconf.com"
+    }
+  ]
+}
