@@ -1,0 +1,71 @@
+<div>
+    <article class="box counter">
+        <h3>
+            <span class="plus">+</span>
+            10
+        </h3>
+        <footer>Years expertise</footer>
+    </article>
+    <article class="box counter">
+        <h3>
+            <span class="plus">+</span>
+            30
+        </h3>
+        <footer>Projects helped</footer>
+    </article>
+    <article class="box counter">
+        <h3>
+            ∞
+        </h3>
+        <footer>Lines of code</footer>
+    </article>
+</div>
+<style>
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    article.counter {
+        max-width: 33%;
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1 0 auto;
+        padding: 31px 0;
+
+
+        h3 {
+
+            margin: 0;
+            font-size: 3rem;
+            line-height: 3rem;
+            color: palegoldenrod;
+            display: flex;
+            flex-direction: row;
+
+
+
+            span.plus {
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                margin-right: .5rem;
+            }
+
+            span.units {
+                font-size: 1rem;
+                line-height: 1.6rem;
+                display: flex;
+                align-items: end;
+            }
+        }
+        footer {
+            text-align: center;
+            font-size: 1.05rem;
+        }
+    }
+</style>

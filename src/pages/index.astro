@@ -1,0 +1,76 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { basics } from "@cv"
+import Counters from '@/components/Counters.astro';
+import AboutMe from '@/components/AboutMe.astro';
+import Stack from '@/components/Stack.astro';
+import Projects from '@/components/Projects.astro';
+import SocialMedia from '@/components/SocialMedia.astro';
+
+const { name, label } = basics
+
+---
+<Layout title=`${name} Portfolio - ${label}` bg="#393c42">
+    <section>
+        <div class="column">
+            <AboutMe/>
+            <Counters/>
+            <SocialMedia />
+        </div>
+        <div class="column">
+            <div class="row">
+                <Stack />
+            </div>
+            <div class="row">
+                <Projects />
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style is:global>
+    body {
+        display: flex;
+    }
+    section {
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        align-self: center;
+        gap: 1rem;
+    }
+
+    div.column {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        max-width: 720px;
+        gap: 1rem;
+        height: 100%;
+    }
+
+    div.row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1 0 auto;
+        gap: 1rem;
+    }
+
+    .box {
+        background-color: rgb(16, 16, 16);
+        box-shadow: 0 0 1px rgba(255,255,255,0.5);
+        border-radius: 1rem;
+        padding: 1rem;
+        height: 100%;
+    }
+    @media (min-width: 1200px) {
+        body {
+            height: 100vh;
+        }
+    }
+</style>

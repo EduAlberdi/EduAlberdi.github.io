@@ -1,0 +1,204 @@
+---
+import LocationPin from '@/icons/location.astro'
+import Language from '@/icons/language.astro'
+import Time from '@/icons/clock.astro'
+
+---
+<div class="box column">
+    <div class="row">
+        <div class="about-me">
+            <span>
+                <span class="pulse-indicator"></span>
+                Open to work
+            </span>
+            <h1>Eduard Alberdi Marín</h1>
+            <h2>
+                <a href="" class="typewrite" data-period="2000" data-type='[ "Full Stack Developer", "UI/UX Lover", "Tech enthusiast", "Animal lover" ]'>
+                    <span class="wrap"></span>
+                </a>
+            </h2>
+
+            <ul>
+                <li><LocationPin /> Barcelona</li>
+                <li><Language />English & Spanish</li>
+                <li><Time />GMT+2</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="/me.webp" alt="Photography of Eduard Alberdi" />
+        </div>
+    </div>
+</div>
+
+<style>
+    .column{
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 100%;
+        max-height: 255px;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 100%;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+    }
+
+    div.about-me {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        gap: 8px;
+
+        span {
+            background-color: rgb(25, 25, 25);
+            border: 1px solid rgb(33, 33, 33);
+            border-radius: 1rem;
+            padding: .5rem 1rem;
+            margin-bottom: .5rem;
+            display: inline-flex;
+            align-self: flex-start;
+
+            .pulse-indicator {
+                height: 10px;
+                width: 10px;
+                display: inline-block;
+                border-radius: 100%;
+                background-color: rgb(109, 211, 61);
+                margin: 0 8px 0 0;
+                padding: 0;
+            }
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        h2 a {
+            font-weight: normal;
+            font-size: large;
+            color: palegoldenrod;
+        }
+        h2 a span{
+            padding: 0;
+            min-height: 23.5px;
+        }
+        ul {
+            display: inline-flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        li {
+            align-items: center;
+            background: #eee;
+            border-radius: 6px;
+            color: black;
+            display: flex;
+            font-size: 0.8rem;
+            font-weight: 500;
+            gap: 4px;
+            padding: 0.2rem 0.6rem;
+        }
+    }
+
+    div.image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 168px;
+
+        img {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            width: 168px;
+            border-radius: 16px;
+        }
+    }
+    @media (max-width: 767px) {
+        .column {
+            max-height: 100%;
+            .row {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                .about-me {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        div.image {
+            align-items: center;
+            max-width: 60%;
+            img {
+                width: 60%;
+            }
+        }
+    }
+</style>
+
+<script type="application/javascript">
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 1000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 100;
+        }
+
+        setTimeout(function() {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        // css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>

@@ -1,0 +1,74 @@
+---
+import GitHub from '@/icons/github.astro';
+import LinkedIn from '@/icons/linkedin.astro';
+import Calendar from '@/icons/calendar.astro';
+import Mail from '@/icons/mail.astro';
+import { basics } from "@cv"
+
+const { name, profiles, email, calendly } = basics
+
+const SOCIAL_ICONS = {
+    GitHub,
+    LinkedIn,
+}
+---
+<div class="box column">
+    {
+        email && (
+                    <a
+                            href={`mailto:${email}`}
+                            title={`Send an email to ${name} at ${email}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                    >
+                        <Mail />
+                    </a>
+        )
+    }
+    {
+        calendly && (
+                    <a
+                            href={calendly.url}
+                            title={`Book a call with ${calendly.username}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                    >
+                        <Calendar />
+                    </a>
+        )
+    }
+    {
+        profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network]
+
+            return (
+                    <a
+                        href={url}
+                        title={`Visit ${name}'s profile in ${network}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Icon />
+                    </a>
+            )
+        })
+    }
+</div>
+
+<style>
+    .column{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        gap: 1rem;
+    }
+    a {
+        color: palegoldenrod;
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+</style>
