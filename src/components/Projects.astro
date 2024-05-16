@@ -17,7 +17,7 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
                             <li>
                                 <p>
                                     <span>{position} @ {name}</span>
-                                    <span>{months[startYear.getMonth()]+' '+startYear.getFullYear() } to {(endYear !== null) ? months[startYear.getMonth()]+' '+endYear.getFullYear() : 'Actual'}</span>
+                                    <span>{months[startYear.getMonth()]+' '+startYear.getFullYear() } to {(endYear !== null) ? months[endYear.getMonth()]+' '+endYear.getFullYear() : 'Actual'}</span>
                                 </p>
                                 <p class="summary">{summary}</p>
                             </li>

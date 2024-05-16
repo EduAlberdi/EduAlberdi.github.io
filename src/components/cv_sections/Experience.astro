@@ -34,7 +34,7 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
                     <time 
                       datetime={endDate}
                       data-title={endDate}>
-                      {(endYear !== null) ? months[startYear.getMonth()]+' '+endYear.getFullYear() : 'Actual'}
+                      {(endYear !== null) ? months[endYear.getMonth()]+' '+endYear.getFullYear() : 'Actual'}
                     </time>
                   </div>
                 </header>
