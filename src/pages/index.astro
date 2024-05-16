@@ -1,5 +1,4 @@
 ---
-import Layout from '@/layouts/Layout.astro';
 import { basics } from "@cv"
 import Counters from '@/components/Counters.astro';
 import AboutMe from '@/components/AboutMe.astro';
@@ -8,7 +7,7 @@ import Projects from '@/components/Projects.astro';
 import SocialMedia from '@/components/SocialMedia.astro';
 
 const { name } = basics
-
+const title = `${name.split(' ')[0]}'s Portfolio`
 ---
 <html lang="en" style=`background: #393c42`>
 <head>
@@ -17,7 +16,7 @@ const { name } = basics
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{name}'s Portfolio</title>
+    <title>{title}</title>
 </head>
 <body>
     <section>
