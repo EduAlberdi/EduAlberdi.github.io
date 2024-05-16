@@ -11,6 +11,15 @@ const title = `${name.split(' ')[0]}'s Portfolio`
 ---
 <html lang="en" style=`background: #393c42`>
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+    <script type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3ES7HTK6JY');
+    </script>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
@@ -108,3 +117,5 @@ const title = `${name.split(' ')[0]}'s Portfolio`
         }
     }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3ES7HTK6JY"></script>
