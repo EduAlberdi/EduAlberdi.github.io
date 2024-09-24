@@ -34,7 +34,7 @@
   },
   "work": [
     {
-      "name": "Novatec Software Gmbh",
+      "name": "Novatec Software GmbH",
       "position": "Full Stack Developer",
       "url": "https://www.novatec-gmbh.de/es/",
       "startDate": "2023-05-01",
@@ -47,7 +47,7 @@
       "url": "https://www.werfen.com/es/esv",
       "startDate": "2021-11-01",
       "endDate": "2023-05-01",
-      "summary": "As a Developer at a this leading health tech company, I contributed to a vital application's development, utilizing Java for backend and Angular for frontend. With stringent FDA regulations in mind, ensuring high-quality code was paramount. My efforts ensured compliance while exceeding industry standards and client expectations."
+      "summary": "As a Developer at this leading health tech company, I contributed to a vital application's development, utilizing Java for backend and Angular for frontend. With stringent FDA regulations in mind, ensuring high-quality code was paramount. My efforts ensured compliance while exceeding industry standards and client expectations."
     },
     {
       "name": "ByInfinitumServices",
@@ -55,7 +55,7 @@
       "url": null,
       "startDate": "2020-10-01",
       "endDate": "2021-11-01",
-      "summary": "As the lead developer, I guided a team of five in developing a burocacy application. Built with Angular for the frontend and .NET Core for the backend, our focus was set on high-quality coding since we had to pass several Spanish Goverment's law. Additionally, leveraging Python for web scraping bolstered our data acquisition capabilities. Our collaborative efforts led to a project that met regulatory standards and surpassed industry expectations."
+      "summary": "As the lead developer, I guided a team of five in developing a bureaucracy application. Built with Angular for the frontend and .NET Core for the backend, our focus was set on high-quality coding since we had to pass several Spanish Government's laws. Additionally, leveraging Python for web scraping bolstered our data acquisition capabilities. Our collaborative efforts led to a project that met regulatory standards and surpassed industry expectations."
     },
     {
       "name": "LIFE Informatica",
