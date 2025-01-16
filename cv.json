@@ -35,6 +35,14 @@
   "work": [
     {
       "name": "Novatec Software GmbH",
+      "position": "Proxy Product Owner",
+      "url": "https://www.novatec-gmbh.de/es/",
+      "startDate": "2025-01-01",
+      "endDate": null,
+      "summary": "In this role, I serve as a crucial link between stakeholders and development teams, ensuring seamless communication and alignment of product goals with business strategies. I focus on managing the product backlog and translating complex business needs into clear, actionable user stories. My work involves fostering collaboration across cross-functional teams, utilizing Agile methodologies to drive the development process and ensure the delivery of high-quality products that meet customer expectations and business objectives."
+    },
+    {
+      "name": "Novatec Software GmbH",
       "position": "Full Stack Developer",
       "url": "https://www.novatec-gmbh.de/es/",
       "startDate": "2023-05-01",
