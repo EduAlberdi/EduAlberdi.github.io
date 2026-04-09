@@ -34,11 +34,19 @@
   },
   "work": [
     {
+      "name": "adesso Spain",
+      "position": "Senior Software Engineer",
+      "url": "https://www.adesso.es/es/",
+      "startDate": "2026-04-01",
+      "endDate": null,
+      "summary": "As a senior software engineer focused on the frontend, I've developed and maintained 3 applications using Angular, and contributed to Java backend services. Experienced in Backend-for-Frontend (BFF) architecture, building scalable and high-performance solutions."
+    },
+    {
       "name": "Novatec Software GmbH",
       "position": "Proxy Product Owner",
       "url": "https://www.novatec-gmbh.de/es/",
       "startDate": "2025-01-01",
-      "endDate": null,
+      "endDate": "2026-04-01",
       "summary": "In this role, I serve as a crucial link between stakeholders and development teams, ensuring seamless communication and alignment of product goals with business strategies. I focus on managing the product backlog and translating complex business needs into clear, actionable user stories. My work involves fostering collaboration across cross-functional teams, utilizing Agile methodologies to drive the development process and ensure the delivery of high-quality products that meet customer expectations and business objectives."
     },
     {
@@ -46,7 +54,7 @@
       "position": "Full Stack Developer",
       "url": "https://www.novatec-gmbh.de/es/",
       "startDate": "2023-05-01",
-      "endDate": null,
+      "endDate": "2026-04-01",
       "summary": "As a Full Stack Developer, I developed and maintained over 10 applications, encompassing both backend-only and full-stack projects. Leveraging Java and Kotlin for backend development and Angular for frontend interfaces, I ensured seamless integration and optimal performance. My contributions resulted in high-quality, user-centric applications that met client expectations. Also contributed to some internal charity projects and hackathons."
     },
     {
