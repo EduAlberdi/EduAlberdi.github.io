@@ -41,6 +41,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
   id="hotkeypad"
   data-placeholder="Search..."
   data-info={JSON.stringify(profilesInfo)}
+  class="no-print"
 >
 </div>
 
@@ -106,6 +107,40 @@ const profilesInfo = profiles.map(({ network, url }) => {
 
     document.dispatchEvent(event)
   })
+
+  const items = document.querySelectorAll("#hotkeypad li");
+  items.forEach((li) => {
+    li.addEventListener("click", (event) => {
+      const target = event.currentTarget as HTMLElement
+      const hotkey = target.dataset.hotkey?.split("+")[1]?.toUpperCase()
+
+      if (!hotkey) return
+
+      switch (hotkey) {
+        case 'L':
+        case 'G':
+          const item = data.find((item) => item.hotkey?.split('+')[1]?.toUpperCase() === hotkey)
+          item?.handler()
+          break
+        case 'P':
+          window.print()
+          break
+        default:
+          var clickEvent = new KeyboardEvent("keydown", {
+            key: "K",
+            code: "KeyK",
+            keyCode: 75,
+            which: 75,
+            ctrlKey: true,
+            altKey: false,
+            shiftKey: false,
+            metaKey: false
+          })
+          document.dispatchEvent(clickEvent)
+          break
+      }
+    })
+  })
 </script>
 
 <style>
@@ -146,6 +181,14 @@ const profilesInfo = profiles.map(({ network, url }) => {
       align-items: center;
       justify-content: center;
       cursor: pointer;
+    }
+  }
+  @media print {
+    .print {
+        display: block !important;
+    }
+    .no-print, .no-print * {
+        display: none !important;
     }
   }
 
