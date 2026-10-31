@@ -1,0 +1,24 @@
+---
+import Eyebrow from "./Eyebrow.astro";
+import Visual from "./Visual.astro";
+
+interface Props {
+  kind: "vehicle" | "property" | "talks";
+  title: string;
+  context: string;
+  copy: string;
+  to: string;
+  items: string[];
+}
+const { kind, title, context, copy, to, items } = Astro.props;
+---
+<article class="project">
+  <a href={`/${to}`} class="visual-link" aria-label={`View ${title}`}><Visual kind={kind} /></a>
+  <div class="project-copy">
+    <Eyebrow>{context}</Eyebrow>
+    <h2>{title}</h2>
+    <p>{copy}</p>
+    <div class="tags">{items.map((item) => <span>{item}</span>)}</div>
+    <a href={`/${to}`} class="textlink">Explore {kind === "talks" ? "talks" : "case study"} →</a>
+  </div>
+</article>

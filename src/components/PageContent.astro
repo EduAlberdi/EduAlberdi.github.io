@@ -1,0 +1,381 @@
+---
+import Closing from "./Closing.astro";
+import Diagram from "./Diagram.astro";
+import Eyebrow from "./Eyebrow.astro";
+import Intro from "./Intro.astro";
+import Project from "./Project.astro";
+import Visual from "./Visual.astro";
+
+interface Props { page: string }
+const { page } = Astro.props;
+const professional = ["Angular", "Java", "Kotlin", "PostgreSQL", "RabbitMQ", "GitHub Actions", "Kubernetes", "Helm"];
+const personal = ["React", "Three.js", "Express", "SQLite", "AI-assisted"];
+const principles = [
+  ["Think in systems", "Architecture is a set of choices. Make their consequences visible."],
+  ["Craft the interface", "The last mile is where technical quality becomes tangible."],
+  ["Deliver the useful", "Practical software should answer real user and business needs."],
+];
+const experience = [
+  {
+    company: "adesso Spain",
+    role: "Senior Software Engineer",
+    dates: "Apr 2026 — Present",
+    copy: "Frontend-focused senior engineering across three Angular applications, with contributions to Java backend services and experience with Backend-for-Frontend architecture.",
+    tags: ["Angular", "Java", "BFF architecture"],
+  },
+  {
+    company: "Novatec Software GmbH",
+    role: "Proxy Product Owner",
+    dates: "Jan 2025 — Apr 2026",
+    copy: "Connected stakeholders and development teams, managed the product backlog, translated business needs into actionable user stories, and supported cross-functional delivery through Agile methods.",
+    tags: ["Product backlog", "User stories", "Agile"],
+  },
+  {
+    company: "Novatec Software GmbH",
+    role: "Full Stack Developer",
+    dates: "May 2023 — Apr 2026",
+    copy: "Developed and maintained more than ten backend and full-stack applications using Java and Kotlin for backend services and Angular for frontend interfaces. Also contributed to internal charity projects and hackathons.",
+    tags: ["Angular", "Java", "Kotlin"],
+  },
+  {
+    company: "Werfen",
+    role: "Full Stack Developer",
+    dates: "Nov 2021 — May 2023",
+    copy: "Contributed to a health-technology application using Java and Angular, working within stringent FDA-regulated quality requirements.",
+    tags: ["Angular", "Java", "FDA-regulated software"],
+  },
+  {
+    company: "ByInfinitumServices",
+    role: "Full Stack Developer",
+    dates: "Oct 2020 — Nov 2021",
+    copy: "Led a team of five developing a bureaucracy application with Angular and .NET Core under Spanish government regulatory requirements, with Python used for web scraping.",
+    tags: ["Angular", ".NET Core", "Python", "Team of five"],
+  },
+  {
+    company: "LIFE Informatica",
+    role: "Full Stack Developer",
+    dates: "Jun 2019 — Oct 2020",
+    copy: "Led a team of two building the retailer’s website and online store with WooCommerce and WordPress, including custom plugins and email marketing initiatives.",
+    tags: ["WordPress", "WooCommerce", "Email marketing"],
+  },
+  {
+    company: "UXLAND BCN",
+    role: "Frontend Developer",
+    dates: "Sep 2018 — Apr 2019",
+    copy: "Designed and developed web components for the Catalan Health Institute using Polymer 3, LitElement, LitHTML, and Redux. Led Travis CI integration for the development workflow.",
+    tags: ["Polymer 3", "LitElement", "Redux", "Travis CI"],
+  },
+  {
+    company: "LIFE Informatica",
+    role: "Full Stack Developer",
+    dates: "Oct 2014 — Aug 2018",
+    copy: "Designed and developed the company website and e-commerce platform with WooCommerce and WordPress, built custom plugins, and managed the online community.",
+    tags: ["WordPress", "WooCommerce", "PHP"],
+  },
+  {
+    company: "LIFE Informatica",
+    role: "Computer Technician",
+    dates: "Oct 2013 — Jun 2014",
+    copy: "Repaired and assembled computers, designed and installed LAN and Wi-Fi networks, and administered Linux and Windows servers.",
+    tags: ["Networks", "Linux", "Windows Server"],
+  },
+];
+const education = [
+  ["Centre d’Estudis Politècnics", "2013 — 2014", "Higher Technical Certificate in Web App Development"],
+  ["Centre d’Estudis Politècnics", "2011 — 2013", "Higher Technical Certificate in Network Computer Systems Administration"],
+  ["University of Cambridge School", "2011", "First Certificate in English — B2 First"],
+  ["IES Joan Salvat Papasseit", "2011", "Technological Baccalaureate"],
+];
+const cvSkills = ["HTML", "CSS", "JavaScript", "TypeScript", "Angular", "Kotlin", "Java", "Node", "C#", ".NET", "PHP", "MySQL", "Git", "GitHub", "NestJS", "Docker", "Travis CI", "GitHub Actions", "SQL Server", "Python", "Bun", "Astro"];
+const talks = [
+  {
+    number: "01",
+    date: "February 2025",
+    title: "E2E or How to Build UI Without Breaking It",
+    venue: "Internal Knowledge-Sharing Session",
+    audience: "Novatec colleagues",
+    language: "English",
+    duration: "90 minutes",
+    format: "15 min context · 60 min live configuration and demo · 15 min Q&A",
+    summary: "An end-to-end testing session focused on Playwright best practices, practical examples, and building confidence in user-interface changes.",
+    topics: ["Playwright", "E2E strategy", "Stable tests", "Live coding", "AI-assisted development", "Audience Q&A"],
+    detail: "During the live demo, a simple Angular to-do application was created with AI assistance and tested from scratch. Questions were answered while coding, making the setup, decisions, and debugging process visible in real time.",
+    outcome: "Colleagues asked for direct support implementing end-to-end testing within their teams.",
+  },
+  {
+    number: "02",
+    date: "December 2024",
+    title: "From Student to Software Engineer",
+    venue: "Centre d’Estudis Politècnics",
+    audience: "Higher Technical Certificate students in Web App Development",
+    language: "Spanish and Catalan",
+    duration: "60 minutes",
+    format: "30 min journey and lessons · 30 min open Q&A",
+    summary: "A candid account of moving from technical education into software engineering, framed around a “CV of Failures—and lessons learned.”",
+    topics: ["First roles", "Job search", "Portfolio building", "Technical skills", "Interpersonal skills", "AI and the job market"],
+    detail: "The session used concrete mistakes as teaching material: building something technically impressive that nobody needed, overengineering a simple feature, and failing to challenge a poor technical decision.",
+    outcome: "Students used the open Q&A to ask for direct advice about their own routes into the industry.",
+  },
+  {
+    number: "03",
+    date: "March 2024",
+    title: "Thinking Reactively: Angular Signals Explained",
+    venue: "Internal Knowledge-Sharing Session",
+    audience: "Novatec colleagues",
+    language: "English",
+    duration: "90 minutes",
+    format: "15 min context · 60 min live configuration and demo · 15 min Q&A",
+    summary: "A practical introduction to Angular’s reactive primitives, moving from the history and motivation behind Signals into a live implementation.",
+    topics: ["Signals", "Computed values", "Effects", "RxJS comparison", "Adoption guidance", "Trade-offs"],
+    detail: "The live demonstration used an anonymised version of a confidential application. It explored when Signals improve local state and derived values, how they relate to existing reactive patterns, and what teams should consider before adopting them.",
+    outcome: "Colleagues followed up to ask for help introducing Signals within their teams.",
+  },
+];
+const projects = [
+  { kind: "vehicle" as const, title: "Vehicle Inspection & Damage Assessment", context: "01 / Professional · confidential", copy: "An anonymised look at production engineering in an automotive service ecosystem.", items: professional, to: "vehicle" },
+  { kind: "property" as const, title: "Property search, reconsidered", context: "02 / Personal · experimental", copy: "A spatial interface for reviewing candidate homes and addresses in a Barcelona neighbourhood.", items: personal, to: "property" },
+  { kind: "talks" as const, title: "Technical talks & knowledge sharing", context: "03 / Community · education", copy: "Free talks about the technology industry, emerging tools and practical uses of AI.", items: ["Technology", "Tools", "AI"], to: "talks" },
+];
+const casePersonal = page === "property";
+---
+
+{page === "home" && (
+  <>
+    <section class="hero">
+      <div class="hero-top"><Eyebrow>Senior Full-Stack Software Engineer</Eyebrow><small>Barcelona, Spain<br />15 years in software</small></div>
+      <div class="hero-flow" aria-hidden="true">
+        <svg viewBox="0 0 1200 520" preserveAspectRatio="none">
+          <path class="flow-path flow-path-a" d="M-40 390 C170 180 300 470 515 250 S860 40 1240 195" />
+          <path class="flow-path flow-path-b" d="M-30 455 C210 250 390 530 610 300 S930 105 1230 265" />
+          <path class="flow-path flow-path-c" d="M60 500 C260 355 430 545 700 380 S985 235 1190 315" />
+        </svg>
+        <span class="flow-orbit orbit-a"></span>
+        <span class="flow-orbit orbit-b"></span>
+        <span class="flow-pulse pulse-a"></span>
+        <span class="flow-pulse pulse-b"></span>
+        <span class="flow-node node-one">01<br />ARCH</span>
+        <span class="flow-node node-two">02<br />CRAFT</span>
+        <span class="flow-node node-three">03<br />SHIP</span>
+        <span class="flow-scan"></span>
+        <span class="flow-caption">SYSTEMS / INTERFACES / DELIVERY</span>
+      </div>
+      <h1>Architecture<br /><span>with a human</span><br /><em>interface.</em></h1>
+      <div class="orb"></div>
+      <div class="hero-foot">
+        <p>I connect system thinking, frontend craft and backend engineering to build software that works in the real world.</p>
+        <div><a class="button" href="/cv/">View my CV <span>↗</span></a><a class="button" href="/work">Selected work <span>↗</span></a></div>
+      </div>
+    </section>
+    <section class="manifesto section">
+      <Eyebrow n="01">Approach</Eyebrow>
+      <p class="statement">The best engineering decisions live at the intersection of <span>systems</span>, <em>people</em>, and <span>purpose.</span></p>
+      <div class="trio">{principles.map(([title, copy], i) => <article><b>0{i + 1}</b><h3>{title}</h3><p>{copy}</p></article>)}</div>
+    </section>
+    <section class="section">
+      <div class="section-head"><Eyebrow n="02">Selected work</Eyebrow><a href="/work" class="textlink">All projects →</a></div>
+      <Project {...projects[0]} /><Project {...projects[1]} />
+    </section>
+    <section class="experience-band section">
+      <div><Eyebrow n="03">Experience</Eyebrow><p class="number">15</p><p>years developing, maintaining and improving software.</p></div>
+      <div><h2>Across the stack.<br /><em>Close to the product.</em></h2><p>Senior software engineering with a frontend emphasis and cross-stack experience—connecting interface requirements with backend architecture and delivery.</p><a href="/experience" class="textlink">Read the web CV →</a></div>
+    </section>
+    <section class="violet-band section">
+      <div><Eyebrow n="04">Knowledge sharing</Eyebrow><h2>Ideas become stronger<br />when shared.</h2></div>
+      <div><b>✳</b><p>Free technical talks at a former educational centre, covering the technology industry, new tools and AI.</p><a href="/talks" class="textlink">Explore talks →</a></div>
+    </section>
+    <Closing />
+  </>
+)}
+
+{page === "work" && (
+  <>
+    <Intro n="01"><Fragment slot="title">Selected <em>work</em><br />and experiments.</Fragment><p>Production software, practical personal tools, and community contributions. Different contexts, one focus: clear technical thinking.</p></Intro>
+    <section class="section projects">{projects.map((project) => <Project {...project} />)}</section>
+    <section class="future"><b>04</b><h2>Future work belongs here.</h2><p>The system can grow without making today’s portfolio feel unfinished.</p></section>
+    <Closing />
+  </>
+)}
+
+{(page === "vehicle" || page === "property") && (
+  <>
+    <section class="case-hero">
+      <div class="section-head"><Eyebrow>{casePersonal ? "Personal experiment / Barcelona" : "Professional work / Anonymised"}</Eyebrow><small>{casePersonal ? "In development" : "Production application / Confidential"}</small></div>
+      <h1>{casePersonal ? "Property search, reconsidered." : "Vehicle Inspection & Damage Assessment."}</h1>
+      <div class="case-summary">
+        <p>{casePersonal ? "A map-oriented tool for exploring homes, addresses and house numbers in Sant Andreu de Palomar." : "Engineering in a production ecosystem supporting vehicle damage assessment at dealerships and after servicing."}</p>
+        <div class="tags">{(casePersonal ? personal : professional).map((item) => <span>{item}</span>)}</div>
+      </div>
+      <Visual kind={casePersonal ? "property" : "vehicle"} />
+    </section>
+    <section class="story">
+      <Eyebrow n="01">{casePersonal ? "The personal problem" : "Context"}</Eyebrow>
+      <div>
+        <h2>{casePersonal ? "Searching by listing misses the experience of place." : "Where physical inspection meets digital systems."}</h2>
+        <p>{casePersonal ? "Existing browsing flows did not fit a personal way of comparing candidate properties street by street. The experiment reframes search around a spatial, map-first view and lightweight review workflow." : "The application operates in the Mercedes-Benz ecosystem. This case study intentionally limits detail to confirmed, non-confidential context."}</p>
+        <aside><b>Scope note</b><p>{casePersonal ? "A practical personal tool and learning project—not a finished commercial product." : "No client branding, protected screens, customer data, private documentation, or unverified outcomes are included."}</p></aside>
+      </div>
+    </section>
+    <section class="diagram-section section"><Eyebrow n="02">Technical environment</Eyebrow><h2>{casePersonal ? "Small pieces, clear responsibilities." : "A cross-stack production context."}</h2><Diagram personal={casePersonal} /></section>
+    <section class="story">
+      <Eyebrow n="03">{casePersonal ? "Product thinking" : "Engineering lens"}</Eyebrow>
+      <div><h2>{casePersonal ? "Built around a real workflow, not a feature checklist." : "The interface and system are one engineering problem."}</h2>
+        <div class="decisions">{(casePersonal
+          ? [["Spatial first", "Use location as the organising principle."], ["Review loop", "Support adding and revisiting candidates."], ["AI in process", "Use assistance while retaining judgement."]]
+          : [["Cross-stack view", "Connect frontend needs with backend constraints."], ["Production care", "Work within CI/CD and orchestration contexts."], ["Confidential by default", "Show depth without exposing private detail."]]
+        ).map(([title, copy], i) => <article><b>0{i + 1}</b><h3>{title}</h3><p>{copy}</p></article>)}</div>
+      </div>
+    </section>
+    <section class="next">
+      <Eyebrow>Next case study</Eyebrow>
+      <p>{casePersonal
+        ? "Three practical sessions about Angular Signals, end-to-end testing, and building a software career through honest lessons learned."
+        : "A personal, map-first property-search experiment built to explore homes and house numbers across Sant Andreu de Palomar."}</p>
+      <a href={casePersonal ? "/talks" : "/property"}>{casePersonal ? "Knowledge shared." : "Closer to home."} →</a>
+    </section>
+  </>
+)}
+
+{page === "about" && (
+  <>
+    <Intro n="02"><Fragment slot="title">Engineer in the<br /><em>space between.</em></Fragment><p>Barcelona, Spain. Over a decade of software development experience.</p></Intro>
+    <section class="about section">
+      <div class="monogram" aria-label="Abstract typographic portrait"><b>E</b><b>A</b><small>41.38° N · 02.17° E</small></div>
+      <div><Eyebrow>Profile</Eyebrow><h2>Architecture and implementation. Systems and interfaces. Curiosity and utility.</h2><p>I work across frontend and backend concerns, with particular care for where technical systems become something people actually use.</p><p>My approach is grounded in production experience: understand the constraints, make deliberate choices, and build the useful thing with care.</p></div>
+    </section>
+    <section class="section"><Eyebrow n="03">Current threads</Eyebrow><div class="quad">{[["Interface craft", "Making complex systems legible, responsive, and useful."], ["AI as a tool", "Exploring practical ways to improve development."], ["Useful experiments", "Testing ideas against real needs."], ["Knowledge shared", "Talking about technology, tools, and AI."]].map(([title, copy], i) => <article><b>0{i + 1}</b><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
+    <Closing />
+  </>
+)}
+
+{page === "experience" && (
+  <>
+    <section class="cv-page-hero">
+      <div>
+        <Eyebrow n="03">Curriculum vitae</Eyebrow>
+        <h1>Experience,<br /><em>on paper.</em></h1>
+      </div>
+      <div class="cv-page-intro">
+        <p>Senior full-stack development with a frontend emphasis, cross-stack understanding, and 15 years of experience.</p>
+        <span>Barcelona · Spain</span>
+      </div>
+    </section>
+    <section class="cv-sheet-wrap">
+      <div class="cv-toolbar" aria-label="CV actions">
+        <div><span>Document preview</span><small>Print-ready · unnecessary interface elements are removed automatically</small></div>
+        <div><a href="/cv/">Original CV ↗</a><button type="button" data-print-cv>Download CV</button></div>
+      </div>
+      <article class="cv-paper">
+        <header class="resume-header cv-experience">
+          <div>
+            <p class="resume-kicker">Curriculum vitae · Barcelona</p>
+            <h2>Eduard<br />Alberdi Marín</h2>
+          </div>
+          <div class="resume-summary">
+            <strong>Senior Full-Stack Developer</strong>
+            <p>15 years of experience architecting and implementing digital solutions across frontend and backend systems.</p>
+            <div class="resume-contact">
+              <a href="mailto:edu.alberdi@gmail.com">edu.alberdi@gmail.com</a>
+              <a href="https://linkedin.com/in/eduard-alberdi">LinkedIn ↗</a>
+              <a href="https://github.com/EduAlberdi">GitHub ↗</a>
+            </div>
+          </div>
+          <figure class="resume-portrait">
+            <img src="/eduard-alberdi.webp" alt="Eduard Alberdi Marín" width="640" height="427" />
+          </figure>
+        </header>
+
+        <section class="resume-section">
+          <div class="resume-label"><span>01</span><h3>Experience</h3></div>
+          <div class="resume-list">
+            {experience.map((item) => (
+              <article class="resume-role">
+                <div class="resume-role-meta"><time>{item.dates}</time><strong>{item.company}</strong></div>
+                <div><h4>{item.role}</h4><p>{item.copy}</p><div class="resume-tags">{item.tags.map((tag) => <span>{tag}</span>)}</div></div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <div class="resume-label"><span>02</span><h3>Education</h3></div>
+          <div class="resume-list education-list">
+            {education.map(([school, dates, qualification]) => (
+              <article><time>{dates}</time><div><strong>{school}</strong><p>{qualification}</p></div></article>
+            ))}
+          </div>
+        </section>
+
+        <section class="resume-section skills-section">
+          <div class="resume-label"><span>03</span><h3>Skills</h3></div>
+          <div class="resume-skills">{cvSkills.map((skill) => <span>{skill}</span>)}</div>
+        </section>
+
+        <footer class="resume-footer print">
+          <span>EA/M · CV</span>
+          <span>Source: edualberdi.github.io/cv/</span>
+          <a target="_blank" href="https://calendly.com/edu-alberdi">Schedule a conversation ↗</a>
+        </footer>
+      </article>
+    </section>
+    <section class="cv-after">
+      <Eyebrow>Available for the right conversation</Eyebrow>
+      <h2>Architecture, craft,<br />and practical delivery.</h2>
+      <a class="button" href="/contact">Get in touch <span>↗</span></a>
+    </section>
+    <script>
+      document.querySelector("[data-print-cv]")?.addEventListener("click", () => window.print());
+    </script>
+  </>
+)}
+
+{page === "talks" && (
+  <>
+    <section class="talks-hero"><Eyebrow n="04">Knowledge sharing</Eyebrow><h1>Share the signal.<br /><em>Question the noise.</em></h1><p>Three sessions over five years: practical engineering for colleagues, honest career guidance for students, and live demonstrations where the decisions stay visible.</p>
+      <div class="talk-hero-visual" aria-hidden="true">
+        <span class="hero-slide slide-signals"><small>01 / FEB 2025</small><strong>Test.describe("Build UI without breaking previous existing elements")</strong></span>
+        <span class="hero-slide slide-e2e"><small>02 / DEC 2024</small><strong>failure → lesson → better decision</strong></span>
+        <span class="hero-slide slide-career"><small>03 / MAR 2024</small><strong>signal → computed → effect</strong></span>
+        <span class="hero-cursor">LIVE_</span>
+      </div>
+    </section>
+    <section class="talks-index section">
+      <div><Eyebrow>Session index</Eyebrow><p>Technical sessions are delivered in English. The student session was delivered in Spanish and Catalan.</p></div>
+      <div>{talks.map((talk) => <a href={`#talk-${talk.number}`}><span>{talk.number}</span><strong>{talk.title}</strong><small>{talk.date}</small></a>)}</div>
+    </section>
+    <section class="talk-detail-list">
+      {talks.map((talk) => (
+        <article class="talk-detail" id={`talk-${talk.number}`}>
+          <header class="talk-detail-header">
+            <span>{talk.number}</span>
+            <div><p>{talk.venue} · {talk.date}</p><h2>{talk.title}</h2></div>
+            <div class="talk-facts"><span>{talk.audience}</span><span>{talk.language}</span><span>{talk.duration}</span></div>
+          </header>
+          <div class="talk-detail-body">
+            <div class="talk-lead"><p>{talk.summary}</p><div class="tags">{talk.topics.map((topic) => <span>{topic}</span>)}</div></div>
+            <div class="talk-narrative">
+              <p>{talk.detail}</p>
+              <aside><small>Format</small><strong>{talk.format}</strong></aside>
+              <aside><small>After the session</small><strong>{talk.outcome}</strong></aside>
+            </div>
+          </div>
+        </article>
+      ))}
+    </section>
+    <section class="section quiet talk-principle"><Eyebrow>Communication is part of engineering</Eyebrow><h2>Show the process.<br />Explain the trade-offs.<br /><em>Invite better questions.</em></h2><p>No slides, recordings, photographs, or repositories are currently available for public sharing.</p></section>
+    <Closing />
+  </>
+)}
+
+{page === "contact" && (
+  <section class="contact">
+    <Eyebrow n="05">Contact / Barcelona · CET</Eyebrow>
+    <h1>Let’s talk about<br />the <em>real problem.</em></h1>
+    <p>For senior full-stack and frontend-focused opportunities, technical conversations, or a thoughtful exchange about software.</p>
+    <div class="contact-links">
+      <a target="_blank" href="https://calendly.com/edu-alberdi"><strong>Schedule a conversation</strong><small>Calendly · external link</small><span>↗</span></a>
+      <a href="/cv/"><strong>Read the CV</strong><small>Experience and technical context</small><span>↗</span></a>
+      <a href="/work"><strong>Explore selected work</strong><small>Professional, personal, community</small><span>↗</span></a>
+    </div>
+    <small>LinkedIn, GitHub, and public email can be added when approved URLs are supplied.</small>
+  </section>
+)}

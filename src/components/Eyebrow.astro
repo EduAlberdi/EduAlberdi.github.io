@@ -1,0 +1,5 @@
+---
+interface Props { n?: string }
+const { n } = Astro.props;
+---
+<p class="eyebrow">{n && <b>{n}</b>}<slot /></p>

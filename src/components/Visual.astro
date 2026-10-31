@@ -1,0 +1,42 @@
+---
+interface Props { kind: "vehicle" | "property" | "talks" }
+const { kind } = Astro.props;
+---
+{kind === "vehicle" && (
+  <div class="visual vehicle" role="img" aria-label="Close-up of a dented, unbranded vehicle door used as a visual reference for damage assessment">
+    <img src="/vehicle-damage.jpg" alt="" width="1800" height="1200" loading="lazy" />
+    <span class="inspection-grid"></span>
+    <i class="damage-marker marker-a">01</i>
+    <i class="damage-marker marker-b">02</i>
+    <i class="damage-marker marker-c">03</i>
+    <b>01 / DAMAGE ASSESSMENT</b>
+    <small>Photo: Maxim Tolchinskiy / Unsplash</small>
+  </div>
+)}
+{kind === "property" && (
+  <div class="visual map map-app" role="img" aria-label="Real application view showing a dark three-dimensional property map of Sant Andreu with numbered candidate markers">
+    <img class="map-app-image" src="/property-map-app.png" alt="" width="2240" height="1223" loading="lazy" />
+    <div class="map-app-frame" aria-hidden="true"></div>
+    <div class="map-app-meta">
+      <span>Real application view</span>
+      <strong>Sant Andreu · 3D property map</strong>
+    </div>
+    <div class="map-app-status"><i></i> Live spatial view</div>
+    <b>02 / PERSONAL TOOL</b>
+  </div>
+)}
+{kind === "talks" && (
+  <div class="visual talk talk-session-visual" role="img" aria-label="Editorial presentation visual referencing live coding, Angular Signals, Playwright, and career lessons">
+    <div class="talk-slide-number">03 / SESSIONS</div>
+    <div class="talk-code">
+      <span>test.step()</span>
+      <span>lesson.learned</span>
+      <span>signal()</span>
+    </div>
+    <div class="talk-wave">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="talk-session-topics"><span>Playwright</span><span>Career</span><span>Angular</span></div>
+    <strong>MAKE IT<br />CLEAR.</strong><b>03 / KNOWLEDGE SHARING</b>
+  </div>
+)}

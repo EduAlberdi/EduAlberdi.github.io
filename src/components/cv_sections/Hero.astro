@@ -1,6 +1,6 @@
 ---
 import { basics } from "@cv"
-import Section from "@/components/Section.astro"
+import Section from "@/components/cv_sections/Section.astro"
 import Mail from "@/icons/mail.astro"
 import LinkedIn from "@/icons/linkedin.astro"
 import GitHub from "@/icons/github.astro"
@@ -11,9 +11,11 @@ const { name, label, image, location, profiles, phone, email, calendly } = basic
 const { city, region } = location
 
 const SOCIAL_ICONS = {
-  GitHub,
-  LinkedIn,
-}
+  GitHub: GitHub,
+  LinkedIn: LinkedIn,
+};
+
+type SocialIconName = keyof typeof SOCIAL_ICONS;
 
 const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
 const linkedUrl = linkedInfo?.url
@@ -70,7 +72,9 @@ function experienceYears(): string {
         }
         {
           profiles.map(({ network, url }) => {
-            const Icon = SOCIAL_ICONS[network]
+            const Icon = SOCIAL_ICONS[network as SocialIconName];
+
+            if (!Icon) return null;
 
             return (
               <a
@@ -105,7 +109,6 @@ function experienceYears(): string {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding-right: 32px;
   }
 
   h1 {

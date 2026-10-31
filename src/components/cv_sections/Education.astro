@@ -1,5 +1,5 @@
 ---
-import Section from "@/components/Section.astro"
+import Section from "@/components/cv_sections/Section.astro"
 
 import { education } from "@cv"
 ---
@@ -16,7 +16,7 @@ import { education } from "@cv"
         return (
           <li>
             <article>
-              <header>
+              <header class="cv-experience">
                 <div>
                   <h3>{institution}</h3>
                 </div>
@@ -24,7 +24,7 @@ import { education } from "@cv"
                 <time>{years}</time>
               </header>
 
-              <footer>
+              <footer class="print">
                 <p>{area}</p>
               </footer>
             </article>

@@ -1,17 +1,9 @@
-import { defineConfig } from 'astro/config';
-import sitemap from "@astrojs/sitemap";
-import partytown from '@astrojs/partytown'
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
-    site: 'https://edualberdi.github.io',
-    output: 'static',
-    integrations: [
-        sitemap(),
-        partytown({
-            config: {
-                forward: ["dataLayer.push"],
-            },
-        }),
-    ],
+  site: "https://edualberdi.github.io",
+  base: "/",
+  output: "static",
+  vite: { plugins: [tailwindcss()] },
 });

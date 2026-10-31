@@ -1,0 +1,26 @@
+---
+import PageContent from "../components/PageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return ["work", "vehicle", "property", "about", "experience", "talks", "contact"].map((page) => ({
+    params: { page },
+    props: { page },
+  }));
+}
+
+interface Props { page: string }
+const { page } = Astro.props;
+const titles: Record<string, string> = {
+  work: "Selected Work",
+  vehicle: "Vehicle Inspection & Damage Assessment",
+  property: "Property Search, Reconsidered",
+  about: "About",
+  experience: "Experience & CV",
+  talks: "Talks & Knowledge Sharing",
+  contact: "Contact"
+};
+---
+<Layout page={page} title={`${titles[page]} — Eduard Alberdi Marín`}>
+  <PageContent page={page} />
+</Layout>

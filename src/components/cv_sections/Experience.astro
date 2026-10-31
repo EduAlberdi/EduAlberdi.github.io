@@ -1,5 +1,5 @@
 ---
-import Section from "@/components/Section.astro"
+import Section from "@/components/cv_sections/Section.astro"
 
 import { work } from "@cv"
 
@@ -9,8 +9,6 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
 <Section title="Experience">
   <ul>
     {
-
-
       work.map(
         ({ name, startDate, endDate, position, summary }) => {
           const startYear = new Date(startDate)
@@ -19,7 +17,7 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
           return (
             <li>
               <article>
-                <header>
+                <header class="cv-experience">
                   <div>
                     <h3>{name}</h3>
                     <h4>{position}</h4>
@@ -58,13 +56,16 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
   }
   article {
     break-inside: avoid;
-    page-break-inside: avoid;    
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
   }
 
   article h3 {
+    width: fit-content;
     font-weight: 500;
     color: #111;
     margin-bottom: .3rem;
+    background-color: var(--lime)
   }
 
   article a {
@@ -78,14 +79,16 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
   article h4 {
     color: #222;
     font-weight: 400;
-    margin-bottom: .3rem;
   }
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+    align-items: end;
+    padding-bottom: .3rem;
   }
 
   time {
@@ -93,6 +96,10 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
     font-size: 0.85rem;
     min-width: 102px;
     cursor: default;
+  }
+
+  section {
+    text-align: justify;
   }
 
   footer {
@@ -125,7 +132,7 @@ const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
     background-color: #333;
     color: #fff;
     font-size: .75rem;
-    font-family: Menlo, Monaco, Lucida Console, "Courier New", monospace;;
+    font-family:var(--mono);
     position: absolute;
     padding: .2rem .5rem;
     bottom: -1.4rem;

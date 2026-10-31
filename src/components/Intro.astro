@@ -1,0 +1,10 @@
+---
+import Eyebrow from "./Eyebrow.astro";
+interface Props { n: string }
+const { n } = Astro.props;
+---
+<section class="intro">
+  <Eyebrow n={n}>Portfolio / 2025</Eyebrow>
+  <h1><slot name="title" /></h1>
+  <div><slot /></div>
+</section>

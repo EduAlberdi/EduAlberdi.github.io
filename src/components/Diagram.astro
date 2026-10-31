@@ -1,0 +1,13 @@
+---
+import Eyebrow from "./Eyebrow.astro";
+interface Props { personal?: boolean }
+const { personal = false } = Astro.props;
+const nodes = personal
+  ? [["Map interface", "React · Three.js"], ["Application API", "Express"], ["Local data", "SQLite"]]
+  : [["Inspection UI", "Angular"], ["Services", "Java · Kotlin"], ["Data & events", "PostgreSQL · RabbitMQ"]];
+---
+<div class="diagram" role="img" aria-label={personal ? "Conceptual architecture for personal project" : "Verified technology environment, not actual system topology"}>
+  <Eyebrow>{personal ? "Conceptual flow / personal project" : "Technology environment / not system topology"}</Eyebrow>
+  <div>{nodes.map(([title, tech], i) => <article><b>0{i + 1}</b><strong>{title}</strong><small>{tech}</small></article>)}</div>
+  <small>Abstracted public-facing diagram. No private data, production screens, or proprietary architecture shown.</small>
+</div>
